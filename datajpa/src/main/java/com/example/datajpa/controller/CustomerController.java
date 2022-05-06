@@ -35,6 +35,16 @@ public class CustomerController {
         return service.getList();
     }
 
+    @GetMapping("customer/create")
+    public @ResponseBody CustomerDto create(CustomerDto dto) {
+        return service.create(dto);
+    }
+
+    @GetMapping("customer/update")
+    public @ResponseBody CustomerDto update(CustomerDto dto) {
+        return service.update(dto);
+    }
+
     // @GetMapping("/customer")
     // public @ResponseBody Customer create() {
     // return service.create(dto);

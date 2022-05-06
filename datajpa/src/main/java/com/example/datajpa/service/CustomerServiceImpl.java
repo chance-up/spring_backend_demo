@@ -44,4 +44,12 @@ public class CustomerServiceImpl implements CustomerService {
         return dto;
     }
 
+    @Override
+    public CustomerDto update(CustomerDto dto) {
+        Customer customer = repository.findByName(dto.getName());
+        BeanUtils.copyProperties(dto, customer, "id");
+        repository.save(customer);
+        return dto;
+    }
+
 }

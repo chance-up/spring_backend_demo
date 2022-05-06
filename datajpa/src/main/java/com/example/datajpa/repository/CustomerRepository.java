@@ -14,4 +14,7 @@ public interface CustomerRepository extends CrudRepository<Customer, Long> {
     public List<Customer> search(@Param("nm") String nm, @Param("id") String id,
             @Param("tkcgrNm") String tkcgrNm);
 
+    @Query(value = "SELECT sys FROM ADM_SYS sys WHERE sys.nm = :nm")
+    public Customer findByName(@Param("nm") String nm);
+
 }

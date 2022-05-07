@@ -45,9 +45,4 @@ public class CustomerController {
         return service.update(dto);
     }
 
-    // @GetMapping("/customer")
-    // public @ResponseBody Customer create() {
-    // return service.create(dto);
-    // }
-
 }

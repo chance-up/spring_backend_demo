@@ -49,4 +49,11 @@ public class SpringSessionController {
 		redisRequest.getSession().invalidate();
 		return "redirect:/";
 	}
+
+	@PostMapping("/destroyAll")
+	public String destroyAllSession(HttpServletRequest redisRequest) {
+		redisRequest.getSession().invalidate();
+		return "redirect:/";
+	}
+
 }
